@@ -35,7 +35,7 @@ public class Team_hub implements Subject{
     }
 
     public void  setOuting(String re){
-        System.out.println("Outing with Team requested by manager.");
+        System.out.println("Outing with Team.Team requested by manager.");
     }
 
 

@@ -1,8 +1,9 @@
 package Factory;
 
+
+import Command.Player;
+
 abstract class player_Made{
-
-
         public abstract void display( );
 }
 
@@ -29,7 +30,7 @@ class midfielder extends player_Made{
     }
 }
 
-class defender extends player_Made{
+class defender extends player_Made implements Player {
     String P_name;
     defender(String name){
         P_name = name;
@@ -37,6 +38,16 @@ class defender extends player_Made{
     @Override
     public void display() {
         System.out.println("New Defender: " + P_name);
+    }
+
+    @Override
+    public void StartCommand() {
+        
+    }
+
+    @Override
+    public void StopCommand() {
+
     }
 }
 
