@@ -1,3 +1,6 @@
+import Factory.Creators.Player_made;
+import Factory.Creators.goalkeeper_fact;
+import Factory.Products.Player;
 import Singleton.League_manager;
 import Strategy.Gegen_press;
 import Team.Team;
@@ -14,6 +17,10 @@ public class Main {
        coachName.display();
        coachName.setTactic(new Gegen_press());
        coachName.showTactic();
+        Player_made new_goalie = new goalkeeper_fact();
+        Player goalkeeper = new_goalie.createPlayer("joe hart");
+        goalkeeper.display();
+        chelsea.addPlayer(goalkeeper);
 
 
 

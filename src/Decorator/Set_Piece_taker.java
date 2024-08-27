@@ -2,16 +2,15 @@ package Decorator;
 
 import Factory.Products.Player;
 
-public class Team_Captain extends Player_Decorator {
-
-    Team_Captain(Player decoratedPlayer) {
+public class Set_Piece_taker extends Player_Decorator{
+     Set_Piece_taker(Player decoratedPlayer) {
         super.playerDecorator(decoratedPlayer);
     }
 
     @Override
     public void display() {
         System.out.println("New Defender: " + decoratedPlayer.getName());
-        System.out.println("New Captain: " + decoratedPlayer.getName());
+        System.out.println("New Set_piece_taker: " + decoratedPlayer.getName());
     }
 
     @Override
@@ -58,10 +57,4 @@ public class Team_Captain extends Player_Decorator {
     public String getName() {
         return null;
     }
-
-
-
-
-
-
 }
