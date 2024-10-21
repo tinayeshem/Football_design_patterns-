@@ -54,8 +54,37 @@ public class midfielder implements Player {
         System.out.println(P_name + " has stopped calling fpr the ball.");
     }
 
+    @Override
+    public String getName() {
+        return P_name;
+    }
+
 
 
     //===================================Commands========================================================================
+
+
+
+    //================================observer
+
+    String announcement;
+
+
+    @Override
+    public void update(String announcement) {
+        this.announcement = announcement;
+    }
+
+    @Override
+    public void current_event() {
+        System.out.println(P_name + " is doing this now: " + announcement);
+    }
+
+
+
+
+    //===========================================
+
+
 
 }

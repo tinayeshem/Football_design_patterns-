@@ -19,4 +19,9 @@ public class Call_for_ball implements command{
     public void stop(){
         player.stop_calling();
     }
+
+    @Override
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
 }

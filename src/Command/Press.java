@@ -19,4 +19,9 @@ public class Press implements command{
     public void stop(){
         player.stop_press();
     }
+
+    @Override
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
 }

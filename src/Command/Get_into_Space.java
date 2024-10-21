@@ -21,4 +21,9 @@ public class Get_into_Space implements  command{
 
     }
 
+    @Override
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
 }

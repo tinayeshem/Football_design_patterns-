@@ -1,6 +1,7 @@
 package Factory.Products;
 
 
+import Singleton.League_manager;
 
 public interface Player {
      void display();
@@ -18,6 +19,10 @@ public interface Player {
 
      void call_for_ball();
      void stop_calling();
+
+     void update(String announcement);
+
+     void current_event();
 
 
 

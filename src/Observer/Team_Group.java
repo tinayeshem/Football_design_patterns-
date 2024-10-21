@@ -1,4 +1,5 @@
 package Observer;
+import Singleton.League_manager;
 
 public class Team_Group implements observer{
     String event;
@@ -14,7 +15,6 @@ public class Team_Group implements observer{
         System.out.println("=============================================================" );
         System.out.println("event");
         System.out.println("=============================================================" );
-
     }
 
 }

@@ -3,13 +3,13 @@ package Decorator;
 import Factory.Products.Player;
 
 public class Set_Piece_taker extends Player_Decorator{
-     Set_Piece_taker(Player decoratedPlayer) {
+     public Set_Piece_taker(Player decoratedPlayer) {
         super.playerDecorator(decoratedPlayer);
     }
 
     @Override
     public void display() {
-        System.out.println("New Defender: " + decoratedPlayer.getName());
+
         System.out.println("New Set_piece_taker: " + decoratedPlayer.getName());
     }
 
@@ -52,6 +52,25 @@ public class Set_Piece_taker extends Player_Decorator{
     public void stop_calling() {
         System.out.println(decoratedPlayer.getName() + " has stopped calling fpr the ball.");
     }
+
+
+
+    //========================================observer
+
+    String announcement;
+
+
+    @Override
+    public void update(String announcement) {
+        this.announcement = announcement;
+    }
+
+    public void current_event(){
+        System.out.println(decoratedPlayer.getName() + " is doing this now: " + announcement);
+    }
+
+
+    //===========================================
 
     @Override
     public String getName() {

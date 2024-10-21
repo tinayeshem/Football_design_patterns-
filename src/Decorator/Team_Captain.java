@@ -4,13 +4,15 @@ import Factory.Products.Player;
 
 public class Team_Captain extends Player_Decorator {
 
-    Team_Captain(Player decoratedPlayer) {
+
+
+    public Team_Captain(Player decoratedPlayer) {
         super.playerDecorator(decoratedPlayer);
     }
 
     @Override
     public void display() {
-        System.out.println("New Defender: " + decoratedPlayer.getName());
+
         System.out.println("New Captain: " + decoratedPlayer.getName());
     }
 
@@ -53,6 +55,24 @@ public class Team_Captain extends Player_Decorator {
     public void stop_calling() {
         System.out.println(decoratedPlayer.getName() + " has stopped calling fpr the ball.");
     }
+
+    //========================================observer
+
+    String announcement;
+
+
+    @Override
+    public void update(String announcement) {
+        this.announcement = announcement;
+    }
+
+    public void current_event(){
+        System.out.println(decoratedPlayer.getName() + " is doing this now: " + announcement);
+    }
+
+
+    //===========================================
+
 
     @Override
     public String getName() {

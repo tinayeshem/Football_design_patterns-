@@ -19,5 +19,11 @@ public class Make_run implements command{
     @Override
     public void stop(){
         player.stop_run();
+
+    }
+
+    @Override
+    public void setPlayer(Player player) {
+        this.player = player;
     }
 }

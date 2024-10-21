@@ -1,6 +1,8 @@
 package Factory.Products;
 
-public class defender implements Player   {
+import Singleton.League_manager;
+
+public class defender implements Player    {
     String P_name;
     public defender(String name){
         P_name = name;
@@ -54,15 +56,31 @@ public class defender implements Player   {
         System.out.println(P_name + " has stopped calling fpr the ball.");
     }
 
+
+
     @Override
     public String getName() {
         return P_name;
     }
 
-    //===================================Commands========================================================================
+    //================================observer
+
+    String announcement;
 
 
+    @Override
+    public void update(String announcement) {
+        this.announcement = announcement;
 
+    }
+
+    @Override
+    public void current_event(){
+        System.out.println(P_name + " is doing this now: " + announcement);
+    }
+
+
+    //===========================================
 
 
 
